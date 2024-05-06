@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reproductor de Radio</title>
+<link rel="icon" href="img/radio_city_logo_50x50.png" type="image/x-icon">
+<link rel="stylesheet" href="css/styles.css">
+<!-- Incluye los archivos CSS y JavaScript de Video.js -->
+<link href="node_modules/video.js/dist/video-js.min.css" rel="stylesheet">
+<script src="node_modules/video.js/dist/video.min.js"></script>
+<script src="node_modules/videojs-flash/dist/videojs-flash.min.js"></script>
+
+
+<!-- Incluye Bootstrap CSS -->
+<link href="booststrap/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark">
+<h1 class="text-center text-light my-3">Reproductor de Radio</h1>
+
+<div class="container">
+    <div class="row">
+        <!-- Radio City Jujuy -->
+        <div class="d-flex flex-column align-items-center col-md-6 mb-4 text-center mt-3">
+            <div class="radio-name text-light mb-3">Radio City Jujuy</div>
+            <video-js id="radio-player-jujuy" class="video-js vjs-default-skin border border-dark" controls>
+                <source src="https://5cd577a3dd8ec.streamlock.net/radiocity/live_1/playlist.m3u8" type="application/x-mpegURL">
+            </video-js>
+        </div>
+
+        <!-- Radio City Ledesma -->
+        <div class="d-flex flex-column align-items-center col-md-6 mb-4 text-center mt-3">
+            <div class="radio-name text-light mb-3">Radio City Ledesma</div>
+            <video-js id="radio-player-ledesma" class="video-js vjs-default-skin border border-dark" controls>
+                <source src="https://5cd577a3dd8ec.streamlock.net/cityledesma/live_1/playlist.m3u8" type="application/x-mpegURL">
+            </video-js>
+        </div>
+
+        <!-- Radio City San Pedro -->
+        <div class="d-flex flex-column align-items-center col-md-6 mb-4 text-center mt-3">
+            <div class="radio-name text-light mb-3">Radio City San Pedro</div>
+            <video-js id="radio-player-san-pedro" class="video-js vjs-default-skin border border-dark" controls>
+                <source src="https://5cd577a3dd8ec.streamlock.net/citysanpedro/live_1/playlist.m3u8" type="application/x-mpegURL">
+            </video-js>
+        </div>
+
+        <!-- Radio Fiesta -->
+        <div class="d-flex flex-column align-items-center col-md-6 mb-4 text-center mt-3">
+            <div class="radio-name text-light mb-3">Radio Fiesta</div>
+            <video-js id="radio-player-fiesta" class="video-js vjs-default-skin border border-dark" controls>
+                <source src="https://5cd577a3dd8ec.streamlock.net/radiofiesta/live_1/playlist.m3u8" type="application/x-mpegURL">
+            </video-js>
+        </div>
+
+        <!-- Radio Mitre -->
+        <div class="d-flex flex-column align-items-center col-md-6 mb-4 text-center mt-3">
+            <div class="radio-name text-light mb-3">Radio Mitre</div>
+            <video-js id="radio-player-mitre" class="video-js vjs-default-skin border border-dark" controls>
+                <source src="https://5cd577a3dd8ec.streamlock.net/radiomitre/live_2/playlist.m3u8" type="application/x-mpegURL">
+            </video-js>
+        </div>
+
+        <!-- Canal 4 Vivo -->
+        <div class="d-flex flex-column align-items-center col-md-6 mb-4 text-center mt-3">
+            <div class="radio-name text-light mb-3">Canal 4 Streaming</div>
+            <video-js id="radio-player-rtmp" class="video-js vjs-default-skin border border-dark" controls>
+                <source src="http://190.52.32.13:1935/CANAL4P/live_720p/playlist.m3u8" type="application/x-mpegURL">
+            </video-js>
+        </div>
+
+    </div>
+</div>
+
+<script>
+// Configuración de los reproductores de Video.js
+var players = [
+    videojs('radio-player-jujuy', { techOrder: ['flash', 'html5'] }),
+    videojs('radio-player-ledesma', { techOrder: ['flash', 'html5'] }),
+    videojs('radio-player-san-pedro', { techOrder: ['flash', 'html5'] }),
+    videojs('radio-player-fiesta', { techOrder: ['flash', 'html5'] }),
+    videojs('radio-player-mitre', { techOrder: ['flash', 'html5'] }),
+    videojs('radio-player-rtmp', { techOrder: ['flash', 'html5'] })
+];
+
+players.forEach(function(player) {
+    player.controlBar.pictureInPictureToggle(false); // Ocultar opción de Picture-in-Picture
+    player.controlBar.fullscreenToggle(false); // Ocultar opción de Fullscreen
+});
+
+</script>
+
+</body>
+</html>

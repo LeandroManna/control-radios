@@ -1,0 +1,89 @@
+
+.radio-player-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-gap: 20px; /* Espacio entre reproductores */
+}
+#radio-player-jujuy {
+    /* Estilos para Radio City Jujuy */
+        background-image: url(../img/radio-player-jujuy-image.jpeg);
+        background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+        background-position: center; /* Centra la imagen en el contenedor */
+        width: 300px; /* Ancho del reproductor */
+        height: 200px; /* Altura del reproductor */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white; /* Color del texto */
+}
+
+#radio-player-ledesma {
+    /* Estilos para Radio City Ledesma */
+    background-image: url(../img/radio-player-ledesma-image.jpeg);
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    width: 300px; /* Ancho del reproductor */
+    height: 200px; /* Altura del reproductor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Color del texto */
+}
+
+#radio-player-san-pedro {
+    /* Estilos para Radio City San Pedro */
+    background-image: url(../img/radio-player-san-pedro-image.jpeg);
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    width: 300px; /* Ancho del reproductor */
+    height: 200px; /* Altura del reproductor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Color del texto */
+}
+
+#radio-player-fiesta {
+    /* Estilos para Radio Fiesta */
+    background-image: url(../img/radio-player-fiesta-image.jpeg);
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    width: 300px; /* Ancho del reproductor */
+    height: 200px; /* Altura del reproductor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Color del texto */
+}
+
+#radio-player-mitre {
+    /* Estilos para Radio Mitre */
+    background-image: url(../img/radio-player-mitre-image.jpeg);
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    width: 300px; /* Ancho del reproductor */
+    height: 200px; /* Altura del reproductor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Color del texto */
+}
+
+#radio-player-rtmp {
+    /* Estilos para Stream Canal 4 */
+    background-image: url(../img/radio-player-rtmp-image.jpeg);
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    width: 300px; /* Ancho del reproductor */
+    height: 200px; /* Altura del reproductor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Color del texto */
+}
+
+/* Estilos para ocultar los controles de fullscreen y picture-in-picture */
+.vjs-picture-in-picture-control,
+.vjs-fullscreen-control {
+    display: none !important;   /* Oculta los controles */
+}
